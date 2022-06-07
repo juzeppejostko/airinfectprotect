@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Velo Sans Display';
+    src: url('VeloSansDisplay-Medium.eot');
+    src: local('Velo Sans Display Medium'), local('VeloSansDisplay-Medium'),
+        url('VeloSansDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansDisplay-Medium.woff2') format('woff2'),
+        url('VeloSansDisplay-Medium.woff') format('woff'),
+        url('VeloSansDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Velo Sans Display';
+    src: url('VeloSansDisplay-Black.eot');
+    src: local('Velo Sans Display Black'), local('VeloSansDisplay-Black'),
+        url('VeloSansDisplay-Black.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansDisplay-Black.woff2') format('woff2'),
+        url('VeloSansDisplay-Black.woff') format('woff'),
+        url('VeloSansDisplay-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Velo Sans Display';
+    src: url('VeloSansDisplay-Italic.eot');
+    src: local('Velo Sans Display Italic'), local('VeloSansDisplay-Italic'),
+        url('VeloSansDisplay-Italic.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansDisplay-Italic.woff2') format('woff2'),
+        url('VeloSansDisplay-Italic.woff') format('woff'),
+        url('VeloSansDisplay-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Velo Sans Display';
+    src: url('VeloSansDisplay-ThinItalic.eot');
+    src: local('Velo Sans Display Thin Italic'), local('VeloSansDisplay-ThinItalic'),
+        url('VeloSansDisplay-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansDisplay-ThinItalic.woff2') format('woff2'),
+        url('VeloSansDisplay-ThinItalic.woff') format('woff'),
+        url('VeloSansDisplay-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Velo Sans Text';
+    src: url('VeloSansText.eot');
+    src: local('Velo Sans Text'), local('VeloSansText'),
+        url('VeloSansText.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansText.woff2') format('woff2'),
+        url('VeloSansText.woff') format('woff'),
+        url('VeloSansText.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Velo Sans Text';
+    src: url('VeloSansText-BoldItalic.eot');
+    src: local('Velo Sans Text Bold Italic'), local('VeloSansText-BoldItalic'),
+        url('VeloSansText-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansText-BoldItalic.woff2') format('woff2'),
+        url('VeloSansText-BoldItalic.woff') format('woff'),
+        url('VeloSansText-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Velo Sans Display';
+    src: url('VeloSansDisplay-BlackItalic.eot');
+    src: local('Velo Sans Display Black Italic'), local('VeloSansDisplay-BlackItalic'),
+        url('VeloSansDisplay-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansDisplay-BlackItalic.woff2') format('woff2'),
+        url('VeloSansDisplay-BlackItalic.woff') format('woff'),
+        url('VeloSansDisplay-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Velo Sans Display';
+    src: url('VeloSansDisplay.eot');
+    src: local('Velo Sans Display'), local('VeloSansDisplay'),
+        url('VeloSansDisplay.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansDisplay.woff2') format('woff2'),
+        url('VeloSansDisplay.woff') format('woff'),
+        url('VeloSansDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Velo Sans Display';
+    src: url('VeloSansDisplay-Bold.eot');
+    src: local('Velo Sans Display Bold'), local('VeloSansDisplay-Bold'),
+        url('VeloSansDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansDisplay-Bold.woff2') format('woff2'),
+        url('VeloSansDisplay-Bold.woff') format('woff'),
+        url('VeloSansDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Velo Sans Display';
+    src: url('VeloSansDisplay-LightItalic.eot');
+    src: local('Velo Sans Display Light Italic'), local('VeloSansDisplay-LightItalic'),
+        url('VeloSansDisplay-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansDisplay-LightItalic.woff2') format('woff2'),
+        url('VeloSansDisplay-LightItalic.woff') format('woff'),
+        url('VeloSansDisplay-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Velo Sans Text';
+    src: url('VeloSansText-Bold.eot');
+    src: local('Velo Sans Text Bold'), local('VeloSansText-Bold'),
+        url('VeloSansText-Bold.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansText-Bold.woff2') format('woff2'),
+        url('VeloSansText-Bold.woff') format('woff'),
+        url('VeloSansText-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Velo Sans Display';
+    src: url('VeloSansDisplay-MediumItalic.eot');
+    src: local('Velo Sans Display Medium Italic'), local('VeloSansDisplay-MediumItalic'),
+        url('VeloSansDisplay-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansDisplay-MediumItalic.woff2') format('woff2'),
+        url('VeloSansDisplay-MediumItalic.woff') format('woff'),
+        url('VeloSansDisplay-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Velo Sans Display';
+    src: url('VeloSansDisplay-Light.eot');
+    src: local('Velo Sans Display Light'), local('VeloSansDisplay-Light'),
+        url('VeloSansDisplay-Light.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansDisplay-Light.woff2') format('woff2'),
+        url('VeloSansDisplay-Light.woff') format('woff'),
+        url('VeloSansDisplay-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Velo Sans Display';
+    src: url('VeloSansDisplay-Thin.eot');
+    src: local('Velo Sans Display Thin'), local('VeloSansDisplay-Thin'),
+        url('VeloSansDisplay-Thin.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansDisplay-Thin.woff2') format('woff2'),
+        url('VeloSansDisplay-Thin.woff') format('woff'),
+        url('VeloSansDisplay-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Velo Sans Text';
+    src: url('VeloSansText-Italic.eot');
+    src: local('Velo Sans Text Italic'), local('VeloSansText-Italic'),
+        url('VeloSansText-Italic.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansText-Italic.woff2') format('woff2'),
+        url('VeloSansText-Italic.woff') format('woff'),
+        url('VeloSansText-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Velo Sans Display';
+    src: url('VeloSansDisplay-BoldItalic.eot');
+    src: local('Velo Sans Display Bold Italic'), local('VeloSansDisplay-BoldItalic'),
+        url('VeloSansDisplay-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('VeloSansDisplay-BoldItalic.woff2') format('woff2'),
+        url('VeloSansDisplay-BoldItalic.woff') format('woff'),
+        url('VeloSansDisplay-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
