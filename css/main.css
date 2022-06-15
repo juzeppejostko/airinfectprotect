@@ -9,6 +9,7 @@
     --pressed-green: #278D36;
     --light-red: #DE2B34;
     --background-gray: #DEE5EA;
+    --solitude: #F6F7F9;
 }
 
 @font-face {
@@ -325,6 +326,11 @@ body.lock{
     letter-spacing: -0.02em;
     color: var(--deep-green);
     margin-bottom: 48px;
+
+}
+
+.prevention__title br{
+    display: none;
 }
 
 .prevention__wrapper{
@@ -334,6 +340,7 @@ body.lock{
 
 .prevention__card{
     display: flex;
+    width: 245px;
     max-width: 245px;
 }
 
@@ -352,9 +359,10 @@ body.lock{
     max-width: 245px;
 }
 
-.purifier{
-
+.prevention__card-text br{
+    display: none;
 }
+
 .needpurifier__body{
     display: flex;
     justify-content: flex-end;
@@ -389,7 +397,12 @@ body.lock{
     line-height: 150%;
     letter-spacing: -0.02em;
     color: var(--grey);
+    max-width: 321px;
     padding-bottom: 16px;
+}
+
+.needpurifier__text br{
+    display: none;
 }
 
 .needpurifier__button{
@@ -398,7 +411,7 @@ body.lock{
 }
 
 .tech-advantage__body{
-
+    padding: 0 0 105px 0;
 }
 
 .tech-advantage__title{
@@ -411,6 +424,10 @@ body.lock{
     letter-spacing: -0.02em;
     color: var(--black);
     margin-bottom: 78px;
+}
+
+.tech-advantage__title br{
+    display: none;
 }
 
 .tech-advantage__wrapper{
@@ -460,8 +477,116 @@ body.lock{
     max-width: 219px;
 }
 
+.product__body{
+    display: flex;
+    justify-content: flex-end;
+    padding: 80px 0 107px 0;
+}
 
+.product__content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
+.product__title{
+    font-family: 'Akrobat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    max-width: 577px;
+    margin-bottom: 24px;
+}
+
+.order{
+    background: var(--solitude);
+    background-size: cover;
+}
+
+.order__body{
+    padding: 80px 0;
+}
+
+.order__title-block{
+    margin-bottom: 24px;
+}
+
+.order__title{
+    margin: 0 auto;
+    font-family: 'Akrobat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    max-width: 471px;
+}
+
+.order__button-block{
+    text-align: center;
+}
+
+.order__button{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: var(--deep-green);
+    padding: 8.5px 24px;
+    border: 2px solid var(--deep-green);
+    border-radius: 50px;
+
+}
+
+.about__body{
+    padding: 100px 0 120px 0;
+}
+
+.about__title{
+    font-family: 'Akrobat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    margin-bottom: 16px;
+}
+
+.about__subtitle-block{
+    margin-bottom: 40px;
+}
+
+.about__subtitle, .about__text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: var(--black);
+    max-width: 710px;
+    margin: 0 auto;
+}
+
+.about__subtitle br, .about__text br{
+    display: none;
+}
+
+.about__subtitle a{
+    color: var(--red);
+    text-decoration: underline;
+}
 
 .footer__body{
     padding: 40px 0px 57px 0px;
@@ -514,6 +639,13 @@ body.lock{
     }
 }
 
+@media screen and (max-width: 1033px){
+    .needpurifier__title br{
+        display: none;
+    }
+}
+
+
 @media screen and (max-width: 965px){
     .prevention__wrapper{
         flex-direction: column;
@@ -523,13 +655,19 @@ body.lock{
 
     .prevention__card{
         margin-bottom: 34px;
+    }
 
+    .prevention__card-text br{
+        display: block;
     }
 
     .prevention__card:last-child{
-
         align-items: flex-start;
         margin-bottom: 0px;
+    }
+
+    .product__title{
+        font-size: 32px;
     }
 
 }
@@ -538,26 +676,32 @@ body.lock{
     .tech-advantage__wrapper{
         flex-direction: column;
         justify-content: stretch;
+
     }
     .tech-advantage__wrapper-card{
         margin-bottom: 35px;
+        width: 216px;
+        max-width: 216px;
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     .tech-advantage__wrapper-card:last-child{
         margin-bottom: 0;
     }
-
-    .tech-advantage__wrapper-title{
-        text-align: center;
+    .tech-advantage__wrapper-img{
+        margin-left: -13px;
     }
 
-    .tech-advantage__wrapper-text{
-        text-align: center;
-    }
+}
 
+@media screen and (max-width: 794px){
+    .product__body{
+        justify-content: stretch;
+    }
+    .product__content{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 714px){
@@ -606,6 +750,11 @@ body.lock{
     .needpurifier__title{
         font-size: 28px;
     }
+
+    .needpurifier__text br{
+        display: block;
+    }
+
 }
 
 
@@ -626,6 +775,14 @@ body.lock{
 
     .footer__text-copyright br{
         display: block;
+    }
+
+}
+
+@media screen and (max-width: 575px){
+    .about__subtitle, .about__text{
+        font-size: 15px;
+        max-width: 490px;
     }
 
 }
@@ -652,7 +809,34 @@ body.lock{
     .prevention__title{
         font-size: 28px;
     }
+
+    .prevention__title br{
+        display: block;
+    }
+
     .tech-advantage__title{
         font-size: 28px;
+    }
+
+    .tech-advantage__title br{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 469px){
+    .order__title{
+        font-size: 37px;
+    }
+}
+
+@media screen and (max-width: 418px){
+    .product__title{
+        font-size: 28px;
+        max-width: 343px;
+    }
+    .product__button{
+        display: block;
+        text-align: center;
+        width: 100%;
     }
 }
