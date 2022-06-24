@@ -1,3 +1,4 @@
+const header = document.querySelector(".header");
 const burger = document.querySelector(".header__burger");
 const menu = document.querySelector(".header__nav");
 const button = document.querySelector(".header__button");
@@ -20,6 +21,7 @@ burger.addEventListener(
         button.classList.toggle("active");
         document.body.classList.toggle("lock");
         logo.classList.toggle("active");
+        header.classList.toggle("active");
     }
 )
 
