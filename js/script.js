@@ -48,4 +48,15 @@ swiper_2 = new Swiper('.preview__swiper',{
         breakpoints: {680:{spaceBetween: 30, slidesPerView: 1.3},}
 })
 
+document.querySelectorAll(".chars__tab-link").forEach(item => {
+        item.addEventListener("click", e => {
+                e.preventDefault();
+                const id = e.target.getAttribute("href").replace("#", "");
+                document.querySelectorAll(".chars__tab-link").forEach(child => child.classList.remove("chars__tab-link--active"));
+                document.querySelectorAll(".chars__tab-container").forEach(child => child.classList.remove("chars__tab-container--active"));
+                item.classList.add("chars__tab-link--active");
+                document.getElementById(id).classList.add("chars__tab-container--active");
+        })
+})
+document.querySelector(".chars__tab-link").click();
 new WOW().init();
