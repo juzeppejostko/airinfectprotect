@@ -91,7 +91,7 @@ body.lock{
 }
 
 .hero{
-    background: #E3E8EE;
+    background: var(--background-gray);
 }
 
 .hero__bg{
