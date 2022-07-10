@@ -49,6 +49,25 @@ swiper_2 = new Swiper('.preview__swiper',{
         breakpoints: {680:{spaceBetween: 30, slidesPerView: 1.3},}
 })
 
+const popup = document.querySelector(".pop-up");
+
+document.querySelectorAll(".letters__link-img").forEach((item, index) => {
+    item.addEventListener("click",  (e) => {
+        popup.classList.add("active");
+        document.body.classList.add("lock");
+        if(index === 1){
+            swiper_3.slideTo(2);
+        }
+        if(index === 2){
+            swiper_3.slideTo(3);
+        }
+    });
+});
+
+document.querySelector(".pop-up__cross-wrapper").addEventListener("click", e => {
+    popup.classList.remove("active")
+    document.body.classList.remove("lock")
+});
 
 document.querySelectorAll(".functionality__tabs-link").forEach(item =>{
     item.addEventListener("click", e => {
@@ -76,16 +95,6 @@ document.querySelector(".functionality__tabs-btn").addEventListener('click', fun
         item.classList.toggle("active")
     })
 });
-
-var vid = document.querySelector('#video');
-
-// video block
-/* vid.pause();
-window.onscroll = function() {
-    vid.currentTime = window.pageYOffset/500;
-}; */
-
-new WOW().init();
 
  document.querySelectorAll(".parts__button-block").forEach((item, index) => {
      item.addEventListener("mouseover", e => {
@@ -136,7 +145,83 @@ new WOW().init();
 swiper_3 = new Swiper(".pop-up__slider", {
     navigation: {
         nextEl: ".pop-up__slider-button-next",
-        prevEl: ".pop-up__slider-button-prev"
+        prevEl: ".pop-up__slider-button-prev",
     },
-    centeredSlides: true
+    loop:true
+});
+
+const _name = document.querySelector("._name");
+const _email = document.querySelector("._email");
+const _number = document.querySelector("._number");
+const _agreement = document.querySelector("._agreement");
+const _canCall = document.querySelector("._canCall");
+
+document.addEventListener("DOMContentLoaded", e => {
+    const form = document.getElementById("form");
+    form.addEventListener("submit", formSend);
+
+    async function formSend(e){
+        e.preventDefault()
+
+        let error = formValidate(form);
+        if(error === 0){
+            let infoParams = {
+                from_name: _name.value,
+                number: _number.value,
+                email: _email.value,
+                cantCall: _canCall.checked,
+            }
+            emailjs.send("service_5qtvbif", "template_nrlljsd", infoParams).then(function(res){
+                if(res.status === 200){
+                    document.querySelector(".thx").classList.add("_sended");
+                    document.body.classList.add("lock")
+                    form.reset();
+                }
+            });
+        }
+    }
+
+    function formValidate(form){
+        let error = 0;
+        _email.classList.remove("_error");
+        _number.classList.remove("_error");
+        _agreement.classList.remove("_error");
+        _agreement.parentElement.classList.remove("_error");
+        _name.classList.remove("_error");
+
+        if(_agreement.checked === false){
+            _agreement.classList.add("_error");
+            _agreement.parentElement.classList.add("_error");
+            error++;
+        }
+        if(emailTest(_email) === false){
+            _email.classList.add("_error");
+            error++;
+        }
+        if(numberTest(_number)){
+            _number.classList.add("_error");
+            error++;
+        }else{
+            if(_email.value === "" || _number.value === "" || _name.value === ""){
+                _email.classList.add("_error");
+                _number.classList.add("_error");
+                _name.classList.add("_error");
+                error++;
+            }
+        }
+        return error;
+    }
+
+    function numberTest(number){
+        return /[a-zA-Z|а-эA-Э]/gm.test(number.value);
+    }
+    function emailTest(email){
+        return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(email.value);
+    }
+});
+
+
+document.querySelector(".thx__cross-wrapper").addEventListener("click", e => {
+    document.querySelector(".thx").classList.add("_closed");
+    document.body.classList.remove("lock")
 })
