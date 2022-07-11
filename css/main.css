@@ -976,6 +976,24 @@ body.lock{
     color: var(--black);
 }
 
+.parts__title{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.parts__title-text{
+    font-family: 'Akrobat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 68px;
+    line-height: 110%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: var(--deep-green);
+    margin-bottom: 15px;
+    max-width: 943px;
+}
 
 .parts{
     padding: 50px 0;
@@ -1065,12 +1083,15 @@ body.lock{
 }
 
 .parts__text-block{
+    display: flex;
+    height: 80px;
+    align-items: center;
     text-align: center;
     margin-bottom: 30px;
 }
 
 .parts__text{
-    height: 80px;
+    height: auto;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -1320,7 +1341,7 @@ body.lock{
     position: fixed;
     top: 0;
     left: -100vw;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgb(255, 255, 255);
     z-index: 100000;
 }
 
@@ -1350,6 +1371,7 @@ body.lock{
     text-align: center;
     letter-spacing: -0.02em;
     color: var(--deep-green);
+    margin-bottom: 8px;
 }
 
 .thx__text-subtitle{
@@ -1402,7 +1424,7 @@ body.lock{
     width: 100vw;
     position: fixed;
     left: 0;
-    top: -100%;
+    top: -100vh;
     background: rgba(255, 255, 255, 0.9);
     z-index: 1000;
     transition: top .7s ease-in-out;
@@ -1965,12 +1987,6 @@ body.lock{
 
 .functionality__tabs-navigation-scroll{
 }
-
-.materials {}
-
-.materials__container {}
-
-.container {}
 
 .materials__body {
     padding: 40px 0px 116px 0px;

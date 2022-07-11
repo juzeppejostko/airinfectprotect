@@ -9,8 +9,8 @@ let swiper_3;
 
 var image = document.getElementsByClassName('thumbnail');
 var simple = new simpleParallax(image, {
-        scale: 1.2,
-        delay: 0.5,
+    scale: 1.2,
+    delay: 0.5,
 
 });
 
@@ -27,26 +27,26 @@ burger.addEventListener(
 )
 
 swiper = new Swiper('.slider__slider', {
-        speed: 400,
-        autoHeight: true,
-        loop: true,
-        autoplay: {delay: 3000},
-        grabCursor: true,
-        keyboard: {
-                enabled: true,
-        }
+    speed: 400,
+    autoHeight: true,
+    loop: true,
+    autoplay: {delay: 3000},
+    grabCursor: true,
+    keyboard: {
+        enabled: true,
+    }
 });
 
 swiper_2 = new Swiper('.preview__swiper',{
-        speed: 400,
-        loop: true,
-        autoplay: {delay: 3000},
-        keyboard: {
-                enabled: true,
-        },
-        slidesPerView: 1,
-        spaceBetween: 80,
-        breakpoints: {680:{spaceBetween: 30, slidesPerView: 1.3},}
+    speed: 400,
+    loop: true,
+    autoplay: {delay: 3000},
+    keyboard: {
+        enabled: true,
+    },
+    slidesPerView: 1,
+    spaceBetween: 80,
+    breakpoints: {680:{spaceBetween: 30, slidesPerView: 1.3},}
 })
 
 const popup = document.querySelector(".pop-up");
@@ -55,10 +55,11 @@ document.querySelectorAll(".letters__link-img").forEach((item, index) => {
     item.addEventListener("click",  (e) => {
         popup.classList.add("active");
         document.body.classList.add("lock");
-        if(index === 1){
+        if(index === 0){
+            swiper_3.slideTo(1);
+        }else if(index === 1){
             swiper_3.slideTo(2);
-        }
-        if(index === 2){
+        }else if(index === 2){
             swiper_3.slideTo(3);
         }
     });
@@ -96,58 +97,58 @@ document.querySelector(".functionality__tabs-btn").addEventListener('click', fun
     })
 });
 
- document.querySelectorAll(".parts__button-block").forEach((item, index) => {
-     item.addEventListener("mouseover", e => {
-         //document.querySelector(".parts__text").classList.add("active");
-         switch (index){
-             case 0:
-                 document.querySelector(".parts__text").innerHTML = "Не отвлекает от работы, так как имеет низкий уровень шума (один из самых тихих аппаратов в своей категории, не превышает по громкости привычный уровень шума в офисе)"
-                 break;
-             case 1:
-                 document.querySelector(".parts__text").innerHTML = "Каждые 12 часов запускает термическую обработку фильтров, что позволяет удалять извлеченные из воздуха частицы из фильтра и не превращать сам фильтр в источник скопления инфекции"
-                 break;
-             case 2:
-                 document.querySelector(".parts__text").innerHTML = "Возможность запрограммировать на удобное время работы и автоматический запуск"
-                 break;
-             case 3:
-                 document.querySelector(".parts__text").innerHTML = "Оборудован специальным жидкокристалическим экраном HMI Siemens"
-                 break;
-             case 4:
-                 document.querySelector(".parts__text").innerHTML = "Обеспечивает экономный расход фильтров"
-                 break;
-             case 5:
-                 document.querySelector(".parts__text").innerHTML = "Произведен немецкой компанией с 40-летним стажем поставки оборудования для очищения воздуха в «чистых зонах»"
-                 break;
-             case 6:
-                 document.querySelector(".parts__text").innerHTML = "Органично смотрится в любом помещении"
-                 break;
-             case 7:
-                 document.querySelector(".parts__text").innerHTML = "Безопасен для окружающих и прост в обслуживании"
-                 break;
-         }
-     });
-     item.addEventListener("mouseleave", e => {
-         //document.querySelector(".parts__text").classList.remove("active");
-         switch (index){
-             case 0:
-             case 1:
-             case 2:
-             case 3:
-             case 4:
-             case 5:
-             case 6:
-             case 7:
+document.querySelectorAll(".parts__button-block").forEach((item, index) => {
+    item.addEventListener("mouseover", e => {
+        //document.querySelector(".parts__text").classList.add("active");
+        switch (index){
+            case 0:
+                document.querySelector(".parts__text").innerHTML = "Не отвлекает от работы, так как имеет низкий уровень шума (один из самых тихих аппаратов в своей категории, не превышает по громкости привычный уровень шума в офисе)"
+                break;
+            case 1:
+                document.querySelector(".parts__text").innerHTML = "Каждые 12 часов запускает термическую обработку фильтров, что позволяет удалять извлеченные из воздуха частицы из фильтра и не превращать сам фильтр в источник скопления инфекции"
+                break;
+            case 2:
+                document.querySelector(".parts__text").innerHTML = "Возможность запрограммировать на удобное время работы и автоматический запуск"
+                break;
+            case 3:
+                document.querySelector(".parts__text").innerHTML = "Оборудован специальным жидкокристалическим экраном HMI Siemens"
+                break;
+            case 4:
+                document.querySelector(".parts__text").innerHTML = "Обеспечивает экономный расход фильтров"
+                break;
+            case 5:
+                document.querySelector(".parts__text").innerHTML = "Произведен немецкой компанией с 40-летним стажем поставки оборудования для очищения воздуха в «чистых зонах»"
+                break;
+            case 6:
+                document.querySelector(".parts__text").innerHTML = "Органично смотрится в любом помещении"
+                break;
+            case 7:
+                document.querySelector(".parts__text").innerHTML = "Безопасен для окружающих и прост в обслуживании"
+                break;
+        }
+    });
+    item.addEventListener("mouseleave", e => {
+        //document.querySelector(".parts__text").classList.remove("active");
+        switch (index){
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
                 document.querySelector(".parts__text").innerHTML = "";
-         }
-     })
- })
+        }
+    })
+})
 
 swiper_3 = new Swiper(".pop-up__slider", {
     navigation: {
         nextEl: ".pop-up__slider-button-next",
         prevEl: ".pop-up__slider-button-prev",
     },
-    loop:true
+    loop: true
 });
 
 const _name = document.querySelector("._name");
@@ -169,9 +170,9 @@ document.addEventListener("DOMContentLoaded", e => {
                 from_name: _name.value,
                 number: _number.value,
                 email: _email.value,
-                cantCall: _canCall.checked,
+                canCall: _canCall.checked,
             }
-            emailjs.send("service_5qtvbif", "template_nrlljsd", infoParams).then(function(res){
+            emailjs.send("service_qjtam0i", "template_jfawiz8", infoParams).then(function(res){
                 if(res.status === 200){
                     document.querySelector(".thx").classList.add("_sended");
                     document.body.classList.add("lock")
