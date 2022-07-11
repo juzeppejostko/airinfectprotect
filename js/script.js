@@ -11,7 +11,6 @@ var image = document.getElementsByClassName('thumbnail');
 var simple = new simpleParallax(image, {
     scale: 1.2,
     delay: 0.5,
-
 });
 
 burger.addEventListener(
@@ -25,6 +24,17 @@ burger.addEventListener(
         header.classList.toggle("active");
     }
 )
+
+document.querySelectorAll(".header__nav-link").forEach(item => {
+    item.addEventListener("click", e => {
+        menu.classList.remove("active")
+        burger.classList.remove("active");
+        button.classList.remove("active");
+        document.body.classList.remove("lock");
+        logo.classList.remove("active");
+        header.classList.remove("active");
+    })
+})
 
 swiper = new Swiper('.slider__slider', {
     speed: 400,

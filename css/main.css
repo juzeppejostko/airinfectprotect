@@ -2228,6 +2228,10 @@ body.lock{
         max-width: 100%;
     }
 
+    .parts__title-text{
+        font-size: 48px;
+    }
+
 }
 
 @media screen and (max-width: 540px){
@@ -2259,10 +2263,22 @@ body.lock{
 
     .tech-advantage__title{
         font-size: 28px;
+        text-align: left;
     }
 
     .tech-advantage__title br{
         display: block;
+    }
+
+    .letters__title{
+        font-size: 28px;
+        text-align: left;
+        max-width: 230px;
+    }
+
+    .functionality__title{
+        font-size: 28px;
+        text-align: left;
     }
 }
 
