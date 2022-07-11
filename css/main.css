@@ -153,7 +153,6 @@ body.lock{
     width: 100%;
 }
 
-
 .footer{
     background-color: var(--black);
 }
@@ -1424,7 +1423,7 @@ body.lock{
     width: 100vw;
     position: fixed;
     left: 0;
-    top: -100vh;
+    top: -120vh;
     background: rgba(255, 255, 255, 0.9);
     z-index: 1000;
     transition: top .7s ease-in-out;
