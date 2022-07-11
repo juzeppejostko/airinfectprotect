@@ -236,10 +236,3 @@ document.querySelector(".thx__cross-wrapper").addEventListener("click", e => {
     document.querySelector(".thx").classList.add("_closed");
     document.body.classList.remove("lock")
 })
-
-function fallback(video)
-{
-    var img = video.querySelector('img');
-    if (img)
-        video.parentNode.replaceChild(img, video);
-}
