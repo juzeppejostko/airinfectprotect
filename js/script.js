@@ -24,8 +24,15 @@ burger.addEventListener(
         header.classList.toggle("active");
     }
 )
+const advantages = document.querySelector(".tech-advantage__title");
+const recommendations = document.querySelector(".letters__title");
+const specialities = document.querySelector(".parts__title-text");
+const techData = document.querySelector(".functionality__title");
+const materials = document.querySelector(".materials__title");
+const headerHeight = document.querySelector(".header__body");
+const headerHeightconst = 68;
 
-document.querySelectorAll(".header__nav-link").forEach(item => {
+document.querySelectorAll(".header__nav-link").forEach((item, index) => {
     item.addEventListener("click", e => {
         menu.classList.remove("active")
         burger.classList.remove("active");
@@ -33,6 +40,36 @@ document.querySelectorAll(".header__nav-link").forEach(item => {
         document.body.classList.remove("lock");
         logo.classList.remove("active");
         header.classList.remove("active");
+        if(index == 0){
+            let advantagesElem = advantages.getBoundingClientRect();
+            window.scrollTo({
+                top: advantagesElem.top - headerHeightconst, behavior: "smooth"
+            })
+        }
+        else if(index == 1){
+            let recommendationsElem = recommendations.getBoundingClientRect();
+            window.scrollTo({
+                top: recommendationsElem.top - headerHeightconst, behavior: "smooth"
+            })
+        }
+        else if(index == 2){
+            let specialitiesElem = specialities.getBoundingClientRect();
+            window.scrollTo({
+                top: specialitiesElem.top - headerHeightconst, behavior: "smooth"
+            })
+        }
+        else if(index == 3){
+            let techDataElem = techData.getBoundingClientRect();
+            window.scrollTo({
+                top: techDataElem.top - headerHeightconst, behavior: "smooth"
+            })
+        }
+        else if(index == 4){
+            let materialsElem = materials.getBoundingClientRect();
+            window.scrollTo({
+                top: materialsElem.top - headerHeightconst, behavior: "smooth"
+            })
+        }
     })
 })
 

@@ -667,15 +667,20 @@ body.lock{
     font-family: 'Akrobat';
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 120%;
+    font-size: 48px;
+    line-height: 100%;
     letter-spacing: -0.02em;
     color: var(--black);
     margin-bottom: 16px;
 }
 
-#figures__card-title-1{
+.cards_figures-title{
     padding-top: 14px;
+    font-size: 64px;
+}
+
+#card_1-title{
+    font-size: 64px;
 }
 
 .figures__card-subtitle{
