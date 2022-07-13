@@ -18,19 +18,22 @@ burger.addEventListener(
     function (event) {
         burger.classList.toggle("active");
         menu.classList.toggle("active");
-        button.classList.toggle("active");
+        button.classList.toggle("activeButton");
         document.body.classList.toggle("lock");
         logo.classList.toggle("active");
         header.classList.toggle("active");
     }
 )
 const advantages = document.querySelector(".tech-advantage__title");
+let advantagesElem = advantages.getBoundingClientRect();
 const recommendations = document.querySelector(".letters__title");
-const specialities = document.querySelector(".parts__title-text");
+let recommendationsElem = recommendations.getBoundingClientRect();
+const specialities = document.querySelector(".parts__title");
+let specialitiesElem = specialities.getBoundingClientRect();
 const techData = document.querySelector(".functionality__title");
-const materials = document.querySelector(".materials__title");
-const headerHeight = document.querySelector(".header__body");
-const headerHeightconst = 68;
+let techDataElem = techData.getBoundingClientRect();
+const materials = document.querySelector(".materials__cards");
+let materialsElem = materials.getBoundingClientRect();
 
 document.querySelectorAll(".header__nav-link").forEach((item, index) => {
     item.addEventListener("click", e => {
@@ -41,33 +44,28 @@ document.querySelectorAll(".header__nav-link").forEach((item, index) => {
         logo.classList.remove("active");
         header.classList.remove("active");
         if(index == 0){
-            let advantagesElem = advantages.getBoundingClientRect();
             window.scrollTo({
-                top: advantagesElem.top - headerHeightconst, behavior: "smooth"
+                top: advantagesElem.top - 68, behavior: "smooth"
             })
         }
         else if(index == 1){
-            let recommendationsElem = recommendations.getBoundingClientRect();
             window.scrollTo({
-                top: recommendationsElem.top - headerHeightconst, behavior: "smooth"
+                top: recommendationsElem.top - 68, behavior: "smooth"
             })
         }
         else if(index == 2){
-            let specialitiesElem = specialities.getBoundingClientRect();
             window.scrollTo({
-                top: specialitiesElem.top - headerHeightconst, behavior: "smooth"
+                top: specialitiesElem.top, behavior: "smooth"
             })
         }
         else if(index == 3){
-            let techDataElem = techData.getBoundingClientRect();
             window.scrollTo({
-                top: techDataElem.top - headerHeightconst, behavior: "smooth"
+                top: techDataElem.top, behavior: "smooth"
             })
         }
         else if(index == 4){
-            let materialsElem = materials.getBoundingClientRect();
             window.scrollTo({
-                top: materialsElem.top - headerHeightconst, behavior: "smooth"
+                top: 10590, behavior: "smooth"
             })
         }
     })

@@ -306,6 +306,10 @@ body.lock{
     color: white;
 }
 
+.button:hover{
+    background: var(--light-green);
+}
+
 .header__button{
     position: relative;
     z-index: 25;
@@ -319,7 +323,7 @@ body.lock{
     padding: 11px 24px;
 }
 
-.header__button.active{
+.header__button.activeButton{
     border-color: white;
     background: white;
     color: var(--pressed-green);
@@ -1185,9 +1189,13 @@ body.lock{
 
 .request__container {}
 
-.request__body {}
+.request__form{
+    margin-bottom: 72px;
+}
 
-.request__form {}
+.request__form-button:hover{
+    background: var(--light-green);
+}
 
 .request__form-body{
     max-width: 426px;
@@ -1320,10 +1328,6 @@ body.lock{
     border-radius: 50px;
 }
 
-.request__form{
-    margin-bottom: 72px;
-}
-
 .request__img{
     text-align: center;
 }
@@ -1347,10 +1351,14 @@ body.lock{
     left: -100vw;
     background: rgb(255, 255, 255);
     z-index: 100000;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .thx._sended{
     left: 0;
+    opacity: 1;
+    visibility: visible;
 }
 
 .thx._closed{
@@ -1428,14 +1436,16 @@ body.lock{
     width: 100vw;
     position: fixed;
     left: 0;
-    top: -120vh;
+    top: -100vh;
     background: rgba(255, 255, 255, 0.9);
     z-index: 1000;
     transition: top .7s ease-in-out;
+    opacity: 0;
 }
 
 .pop-up.active{
     top: 0;
+    opacity: 1;
 }
 
 .pop-up__body{
