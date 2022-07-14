@@ -18,22 +18,28 @@ burger.addEventListener(
     function (event) {
         burger.classList.toggle("active");
         menu.classList.toggle("active");
-        button.classList.toggle("activeButton");
+        button.classList.toggle("active");
         document.body.classList.toggle("lock");
         logo.classList.toggle("active");
         header.classList.toggle("active");
+
+        button.addEventListener("click", e =>{
+            menu.classList.remove("active")
+            burger.classList.remove("active");
+            button.classList.remove("active");
+            document.body.classList.remove("lock");
+            logo.classList.remove("active");
+            header.classList.remove("active");
+        })
     }
 )
-const advantages = document.querySelector(".tech-advantage__title");
-let advantagesElem = advantages.getBoundingClientRect();
-const recommendations = document.querySelector(".letters__title");
-let recommendationsElem = recommendations.getBoundingClientRect();
-const specialities = document.querySelector(".parts__title");
-let specialitiesElem = specialities.getBoundingClientRect();
-const techData = document.querySelector(".functionality__title");
-let techDataElem = techData.getBoundingClientRect();
-const materials = document.querySelector(".materials__cards");
-let materialsElem = materials.getBoundingClientRect();
+const advantages = document.querySelector(".tech-advantage");
+const recommendations = document.querySelector(".letters");
+const specialities = document.querySelector(".parts");
+const techData = document.querySelector(".functionality");
+const materials = document.querySelector(".materials");
+
+
 
 document.querySelectorAll(".header__nav-link").forEach((item, index) => {
     item.addEventListener("click", e => {
@@ -44,28 +50,38 @@ document.querySelectorAll(".header__nav-link").forEach((item, index) => {
         logo.classList.remove("active");
         header.classList.remove("active");
         if(index == 0){
+            let advantagesPos = advantages.getBoundingClientRect().top + pageYOffset - header.offsetHeight;
             window.scrollTo({
-                top: advantagesElem.top - 68, behavior: "smooth"
+                top: advantagesPos,
+                behavior: "smooth"
             })
         }
-        else if(index == 1){
+        if(index == 1){
+            let recommendationsPos = recommendations.getBoundingClientRect().top + pageYOffset - header.offsetHeight;
             window.scrollTo({
-                top: recommendationsElem.top - 68, behavior: "smooth"
+                top: recommendationsPos,
+                behavior: "smooth"
             })
         }
-        else if(index == 2){
+        if(index == 2){
+            let specialitiesPos = specialities.getBoundingClientRect().top + pageYOffset - header.offsetHeight;
             window.scrollTo({
-                top: specialitiesElem.top, behavior: "smooth"
+                top: specialitiesPos,
+                behavior: "smooth"
             })
         }
-        else if(index == 3){
+        if(index == 3){
+            let techDataPos = techData.getBoundingClientRect().top + pageYOffset - header.offsetHeight;
             window.scrollTo({
-                top: techDataElem.top, behavior: "smooth"
+                top: techDataPos,
+                behavior: "smooth"
             })
         }
-        else if(index == 4){
+        if(index == 4){
+            let materialsPos = materials.getBoundingClientRect().top + pageYOffset - header.offsetHeight;
             window.scrollTo({
-                top: 10590, behavior: "smooth"
+                top: materialsPos,
+                behavior: "smooth"
             })
         }
     })
@@ -270,4 +286,14 @@ document.addEventListener("DOMContentLoaded", e => {
 document.querySelector(".thx__cross-wrapper").addEventListener("click", e => {
     document.querySelector(".thx").classList.add("_closed");
     document.body.classList.remove("lock")
+})
+
+let request = document.getElementById("order");
+let anchors = document.querySelectorAll(".anchor");
+anchors.forEach(item => {
+    item.addEventListener("click", e=> {
+        request.scrollIntoView({
+            block: "start", behavior: "smooth"
+        })
+    })
 })
