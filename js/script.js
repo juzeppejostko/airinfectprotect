@@ -3,6 +3,7 @@ const burger = document.querySelector(".header__burger");
 const menu = document.querySelector(".header__nav");
 const button = document.querySelector(".header__button");
 const logo = document.querySelector(".header__logo");
+const navBtn = document.querySelector(".header__nav-button");
 let swiper;
 let swiper_2;
 let swiper_3;
@@ -31,6 +32,14 @@ burger.addEventListener(
             logo.classList.remove("active");
             header.classList.remove("active");
         })
+        navBtn.addEventListener("click", e =>{
+            menu.classList.remove("active")
+            burger.classList.remove("active");
+            button.classList.remove("active");
+            document.body.classList.remove("lock");
+            logo.classList.remove("active");
+            header.classList.remove("active");
+        })
     }
 )
 const advantages = document.querySelector(".tech-advantage");
@@ -41,7 +50,7 @@ const materials = document.querySelector(".materials");
 
 
 
-document.querySelectorAll(".header__nav-link").forEach((item, index) => {
+document.querySelectorAll(".header__nav-link-text").forEach((item, index) => {
     item.addEventListener("click", e => {
         menu.classList.remove("active")
         burger.classList.remove("active");
@@ -49,6 +58,7 @@ document.querySelectorAll(".header__nav-link").forEach((item, index) => {
         document.body.classList.remove("lock");
         logo.classList.remove("active");
         header.classList.remove("active");
+        e.preventDefault();
         if(index == 0){
             let advantagesPos = advantages.getBoundingClientRect().top + pageYOffset - header.offsetHeight;
             window.scrollTo({
@@ -291,9 +301,10 @@ document.querySelector(".thx__cross-wrapper").addEventListener("click", e => {
 let request = document.getElementById("order");
 let anchors = document.querySelectorAll(".anchor");
 anchors.forEach(item => {
-    item.addEventListener("click", e=> {
-        request.scrollIntoView({
-            block: "start", behavior: "smooth"
-        })
+    item.addEventListener("click", e =>{
+        e.preventDefault();
+        request.scrollIntoView({block:"start", behavior:"smooth"})
     })
-})
+});
+
+new WOW().init()
