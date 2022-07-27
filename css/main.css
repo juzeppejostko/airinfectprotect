@@ -1176,9 +1176,13 @@ body.lock{
     height: 100vh;
     background: white;
     position: fixed;
-    left: 0;
+    left: -100vw;
     top: 0;
     z-index: 1000;
+}
+
+.request__pop-up.active{
+    left: 0;
 }
 
 .request__pop-up-form-wrapper{
@@ -1196,6 +1200,7 @@ body.lock{
     top: 30px;
     background: transparent;
     position: relative;
+    cursor: pointer;
 }
 
 .request__pop-up-cross > span{

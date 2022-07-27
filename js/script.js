@@ -228,28 +228,69 @@ const _number = document.querySelector("._number");
 const _agreement = document.querySelector("._agreement");
 const _canCall = document.querySelector("._canCall");
 
+
+/*
 document.addEventListener("DOMContentLoaded", e => {
     const form = document.getElementById("form");
     form.addEventListener("submit", formSend);
-
     async function formSend(e){
         e.preventDefault()
 
         let error = formValidate(form);
         if(error === 0){
-            let infoParams = {
-                from_name: _name.value,
-                number: _number.value,
-                email: _email.value,
-                canCall: _canCall.checked,
+        }
+    }
+
+    function formValidate(form){
+        let error = 0;
+        _email.classList.remove("_error");
+        _number.classList.remove("_error");
+        _agreement.classList.remove("_error");
+        _agreement.parentElement.classList.remove("_error");
+        _name.classList.remove("_error");
+
+        if(_agreement.checked === false){
+            _agreement.classList.add("_error");
+            _agreement.parentElement.classList.add("_error");
+            error++;
+        }
+        if(emailTest(_email) === false){
+            _email.classList.add("_error");
+            error++;
+        }
+        if(numberTest(_number)){
+            _number.classList.add("_error");
+            error++;
+        }else{
+            if(_email.value === "" || _number.value === "" || _name.value === ""){
+                _email.classList.add("_error");
+                _number.classList.add("_error");
+                _name.classList.add("_error");
+                error++;
             }
-            emailjs.send("service_qjtam0i", "template_jfawiz8", infoParams).then(function(res){
-                if(res.status === 200){
-                    document.querySelector(".thx").classList.add("_sended");
-                    document.body.classList.add("lock")
-                    form.reset();
-                }
-            });
+        }
+        return error;
+    }
+
+    function numberTest(number){
+        return /[a-zA-Z|а-эA-Э]/gm.test(number.value);
+    }
+    function emailTest(email){
+        return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(email.value);
+    }
+});
+*/
+
+document.addEventListener("DOMContentLoaded", e => {
+    const form = document.querySelectorAll(".request__form-body");
+    form.forEach(item => {
+        item.addEventListener("submit", formSend)
+    })
+    async function formSend(e){
+        e.preventDefault()
+
+        let error = formValidate(form);
+        if(error === 0){
         }
     }
 
@@ -292,19 +333,20 @@ document.addEventListener("DOMContentLoaded", e => {
     }
 });
 
-
 document.querySelector(".thx__cross-wrapper").addEventListener("click", e => {
     document.querySelector(".thx").classList.add("_closed");
     document.body.classList.remove("lock")
 })
 
-let request = document.getElementById("order");
-let anchors = document.querySelectorAll(".anchor");
-anchors.forEach(item => {
-    item.addEventListener("click", e =>{
-        e.preventDefault();
-        request.scrollIntoView({block:"start", behavior:"smooth"})
+document.querySelectorAll('.anchor').forEach(item => {
+    item.addEventListener('click', e => {
+        e.preventDefault()
+        document.querySelector('.request__pop-up').classList.add('active')
     })
-});
+})
+
+document.querySelector('.request__pop-up-cross').addEventListener('click', e=> {
+    document.querySelector('.request__pop-up').classList.remove('active')
+})
 
 new WOW().init()
