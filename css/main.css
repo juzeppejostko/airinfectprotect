@@ -258,13 +258,17 @@ body.lock{
 .header__button {
     border: 2px solid var(--green);
     border-radius: 50px;
-    padding: 11px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-family: 'Vela Sans';
     font-weight: 600;
     font-size: 14px;
     line-height: 130%;
     color: var(--green);
+    width: 111px;
+    height: 40px;
     position: relative;
     z-index: 16;
 }
@@ -1167,6 +1171,49 @@ body.lock{
     max-width: 100%;
 }
 
+.request__pop-up{
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.request__pop-up-form-wrapper{
+    padding: 80px 0;
+}
+
+.request__pop-up-cross-wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.request__pop-up-cross{
+    width: 24px;
+    height: 24px;
+    top: 30px;
+    background: transparent;
+    position: relative;
+}
+
+.request__pop-up-cross > span{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    height: 2px;
+    background: #181616;
+}
+
+.request__pop-up-cross > span:nth-child(1){
+    transform: rotate(45deg);
+}
+
+.request__pop-up-cross > span:nth-child(2){
+    transform: rotate(-45deg);
+}
 
 
 .footer__body{
