@@ -412,8 +412,8 @@
             </div>
         </section>
         <section class="video">
-            <div style="padding:56.25% 0 0 0;position:relative;">
-                <iframe src="https://player.vimeo.com/video/713194641?h=94a65d68a4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Franz Ziel Air Infect Protect">
+            <div class="video__block">
+                <iframe class = "youtube_video" src="https://www.youtube.com/embed/unIc4mRCEJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
         </section>
@@ -706,6 +706,57 @@
                 <div class="thx__text">
                     <h2 class="thx__text-title">Request accepted</h2>
                     <div class="thx__text-subtitle">Manager will contact you within <br> 1 working day</div>
+                </div>
+            </div>
+        </div>
+        <div class="request__pop-up">
+            <div class="request__pop-up-container container">
+                <div class="request__pop-up-body">
+                    <div class="request__pop-up-cross-wrapper">
+                        <div class="request__pop-up-cross">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="request__pop-up-form-wrapper">
+                        <div class="request__form">
+                            <form action="#" class="request__form-body" id="form_2">
+                                <h2 class="request__form-title">Send request</h2>
+                                <div class="request__form-item">
+                                    <input type="text" name="name" placeholder="Your name" class="request__form-input _name2">
+                                </div>
+                                <div class="request__form-item">
+                                    <input type="text" name="number" placeholder="+49" class="request__form-input _number2">
+                                </div>
+                                <div class="request__form-item">
+                                    <div class="request__form-checkbox-container">
+                                        <label class="request__form-label">
+                                            <input type="checkbox" name="canCall" class="request__form-checkinput _canCall2">
+                                            <span class="request__form-checkbox"></span>
+                                            <span class="request__form-agreement">No calls. Only messengers</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="request__form-item">
+                                    <input type="text" name="email" placeholder="Your E-mail" class="request__form-input _email2">
+                                    <p class="request__form-subtitle">You will receive an email with pre-order information</p>
+                                </div>
+                                <div class="request__form-item">
+                                    <div class="request__form-checkbox-container">
+                                        <label class="request__form-label">
+                                            <input type="checkbox" name="agreement" class="request__form-checkinput _agreement2">
+                                            <span class="request__form-checkbox"></span>
+                                            <span class="request__form-agreement">I agree to the processing of my personal data</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="request__form-button">Order</button>
+                            </form>
+                        </div>
+                        <div class="request__img">
+                            <img src="img/aip_req_form.png" alt="Air Infect Protect">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -159,9 +159,9 @@ document.querySelector(".functionality__tabs-btn").addEventListener('click', fun
     // body
     document.querySelector(".functionality__tabs-btn").classList.toggle("active");
     if (document.querySelector(".functionality__tabs-btn").classList.contains("active")){
-        document.querySelector(".functionality__tabs-btn").innerHTML="Свернуть характеристики"
+        document.querySelector(".functionality__tabs-btn").innerHTML="Hide characteristics"
     } else {
-        document.querySelector(".functionality__tabs-btn").innerHTML="Смотреть все характеристики"
+        document.querySelector(".functionality__tabs-btn").innerHTML="Show characteristics"
     }
     document.querySelectorAll(".functionality__tabs-tab").forEach(item =>{
         item.classList.toggle("active")
@@ -214,6 +214,7 @@ document.querySelectorAll(".parts__button-block").forEach((item, index) => {
     })
 })
 
+
 swiper_3 = new Swiper(".pop-up__slider", {
     navigation: {
         nextEl: ".pop-up__slider-button-next",
@@ -228,28 +229,128 @@ const _number = document.querySelector("._number");
 const _agreement = document.querySelector("._agreement");
 const _canCall = document.querySelector("._canCall");
 
+
+/*
 document.addEventListener("DOMContentLoaded", e => {
     const form = document.getElementById("form");
     form.addEventListener("submit", formSend);
+    async function formSend(e){
+        e.preventDefault()
+
+        let error = formValidate(form);
+        if(error === 0){
+        }
+    }
+
+    function formValidate(form){
+        let error = 0;
+        _email.classList.remove("_error");
+        _number.classList.remove("_error");
+        _agreement.classList.remove("_error");
+        _agreement.parentElement.classList.remove("_error");
+        _name.classList.remove("_error");
+
+        if(_agreement.checked === false){
+            _agreement.classList.add("_error");
+            _agreement.parentElement.classList.add("_error");
+            error++;
+        }
+        if(emailTest(_email) === false){
+            _email.classList.add("_error");
+            error++;
+        }
+        if(numberTest(_number)){
+            _number.classList.add("_error");
+            error++;
+        }else{
+            if(_email.value === "" || _number.value === "" || _name.value === ""){
+                _email.classList.add("_error");
+                _number.classList.add("_error");
+                _name.classList.add("_error");
+                error++;
+            }
+        }
+        return error;
+    }
+
+    function numberTest(number){
+        return /[a-zA-Z|а-эA-Э]/gm.test(number.value);
+    }
+    function emailTest(email){
+        return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(email.value);
+    }
+});
+*/
+document.addEventListener("DOMContentLoaded", e => {
+    const form = document.getElementById("form_2");
+    const _name = document.querySelector("._name2");
+    const _email = document.querySelector("._email2");
+    const _number = document.querySelector("._number2");
+    const _agreement = document.querySelector("._agreement2");
+    const _canCall = document.querySelector("._canCall2");
+    form.addEventListener("submit", formSend);
+    async function formSend(e){
+        e.preventDefault()
+
+        let error = formValidate(form);
+        if(error === 0){
+        }
+    }
+
+    function formValidate(form){
+        let error = 0;
+        _email.classList.remove("_error");
+        _number.classList.remove("_error");
+        _agreement.classList.remove("_error");
+        _agreement.parentElement.classList.remove("_error");
+        _name.classList.remove("_error");
+
+        if(_agreement.checked === false){
+            _agreement.classList.add("_error");
+            _agreement.parentElement.classList.add("_error");
+            error++;
+        }
+        if(emailTest(_email) === false){
+            _email.classList.add("_error");
+            error++;
+        }
+        if(numberTest(_number)){
+            _number.classList.add("_error");
+            error++;
+        }else{
+            if(_email.value === "" || _number.value === "" || _name.value === ""){
+                _email.classList.add("_error");
+                _number.classList.add("_error");
+                _name.classList.add("_error");
+                error++;
+            }
+        }
+        return error;
+    }
+
+    function numberTest(number){
+        return /[a-zA-Z|а-эA-Э]/gm.test(number.value);
+    }
+    function emailTest(email){
+        return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(email.value);
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", e => {
+    const form = document.getElementById("form");
+    const _name = document.querySelector("._name");
+    const _email = document.querySelector("._email");
+    const _number = document.querySelector("._number");
+    const _agreement = document.querySelector("._agreement");
+    const _canCall = document.querySelector("._canCall");
+    form.addEventListener("submit", formSend)
 
     async function formSend(e){
         e.preventDefault()
 
         let error = formValidate(form);
         if(error === 0){
-            let infoParams = {
-                from_name: _name.value,
-                number: _number.value,
-                email: _email.value,
-                canCall: _canCall.checked,
-            }
-            emailjs.send("service_qjtam0i", "template_jfawiz8", infoParams).then(function(res){
-                if(res.status === 200){
-                    document.querySelector(".thx").classList.add("_sended");
-                    document.body.classList.add("lock")
-                    form.reset();
-                }
-            });
         }
     }
 
@@ -298,15 +399,15 @@ document.querySelector(".thx__cross-wrapper").addEventListener("click", e => {
     document.body.classList.remove("lock")
 })
 
-let request = document.getElementById("order");
-let anchors = document.querySelectorAll(".anchor");
-anchors.forEach(item => {
-    item.addEventListener("click", e =>{
-        e.preventDefault();
-        request.scrollIntoView({block:"start", behavior:"smooth"})
+document.querySelectorAll('.anchor').forEach(item => {
+    item.addEventListener('click', e => {
+        e.preventDefault()
+        document.querySelector('.request__pop-up').classList.add('active')
     })
-});
+})
 
-
+document.querySelector('.request__pop-up-cross').addEventListener('click', e=> {
+    document.querySelector('.request__pop-up').classList.remove('active')
+})
 
 new WOW().init()

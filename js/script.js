@@ -280,12 +280,14 @@ document.addEventListener("DOMContentLoaded", e => {
     }
 });
 */
-
 document.addEventListener("DOMContentLoaded", e => {
-    const form = document.querySelectorAll(".request__form-body");
-    form.forEach(item => {
-        item.addEventListener("submit", formSend)
-    })
+    const form = document.getElementById("form_2");
+    const _name = document.querySelector("._name2");
+    const _email = document.querySelector("._email2");
+    const _number = document.querySelector("._number2");
+    const _agreement = document.querySelector("._agreement2");
+    const _canCall = document.querySelector("._canCall2");
+    form.addEventListener("submit", formSend);
     async function formSend(e){
         e.preventDefault()
 
@@ -332,6 +334,64 @@ document.addEventListener("DOMContentLoaded", e => {
         return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(email.value);
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", e => {
+    const form = document.getElementById("form");
+    const _name = document.querySelector("._name");
+    const _email = document.querySelector("._email");
+    const _number = document.querySelector("._number");
+    const _agreement = document.querySelector("._agreement");
+    const _canCall = document.querySelector("._canCall");
+    form.addEventListener("submit", formSend)
+
+    async function formSend(e){
+        e.preventDefault()
+
+        let error = formValidate(form);
+        if(error === 0){
+        }
+    }
+
+    function formValidate(form){
+        let error = 0;
+        _email.classList.remove("_error");
+        _number.classList.remove("_error");
+        _agreement.classList.remove("_error");
+        _agreement.parentElement.classList.remove("_error");
+        _name.classList.remove("_error");
+
+        if(_agreement.checked === false){
+            _agreement.classList.add("_error");
+            _agreement.parentElement.classList.add("_error");
+            error++;
+        }
+        if(emailTest(_email) === false){
+            _email.classList.add("_error");
+            error++;
+        }
+        if(numberTest(_number)){
+            _number.classList.add("_error");
+            error++;
+        }else{
+            if(_email.value === "" || _number.value === "" || _name.value === ""){
+                _email.classList.add("_error");
+                _number.classList.add("_error");
+                _name.classList.add("_error");
+                error++;
+            }
+        }
+        return error;
+    }
+
+    function numberTest(number){
+        return /[a-zA-Z|а-эA-Э]/gm.test(number.value);
+    }
+    function emailTest(email){
+        return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(email.value);
+    }
+});
+
 
 document.querySelector(".thx__cross-wrapper").addEventListener("click", e => {
     document.querySelector(".thx").classList.add("_closed");
