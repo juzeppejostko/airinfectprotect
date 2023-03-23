@@ -1461,11 +1461,11 @@ section{
     width: 100vw;
     position: fixed;
     top: 0;
-    left: -100vw;
     background: rgb(255, 255, 255);
     z-index: 100000;
+    /*left: -100vw;
     opacity: 0;
-    visibility: hidden;
+    visibility: hidden;*/
 }
 
 .thx._sended{

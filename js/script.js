@@ -280,6 +280,23 @@ document.addEventListener("DOMContentLoaded", e => {
     }
 });
 */
+
+function addLeadToAmoCrm(formId) {
+    let firstName = formId.find('[name="name"]').val();
+    let phone = formId.find('[name="number"]').val();
+    let email = formId.find('[name="email"]').val();
+    let canCall = formId.find('._canCall2').is(':checked') ? 1 : 0;
+    
+    $.post('/amocrm.php', {
+        'first_name': firstName,
+        'phone': phone,
+        'email': email,
+        'can_call': canCall
+    }, function () {
+        $('.thx').removeClass('_closed');
+    });
+}
+
 document.addEventListener("DOMContentLoaded", e => {
     const form = document.getElementById("form_2");
     const _name = document.querySelector("._name2");
@@ -292,10 +309,11 @@ document.addEventListener("DOMContentLoaded", e => {
         e.preventDefault()
 
         let error = formValidate(form);
-        if(error === 0){
+        if (error === 0) {
+            addLeadToAmoCrm($('#form_2'));
         }
     }
-
+    
     function formValidate(form){
         let error = 0;
         _email.classList.remove("_error");
@@ -349,7 +367,8 @@ document.addEventListener("DOMContentLoaded", e => {
         e.preventDefault()
 
         let error = formValidate(form);
-        if(error === 0){
+        if (error === 0) {
+            addLeadToAmoCrm($('#form'));
         }
     }
 
