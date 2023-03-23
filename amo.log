@@ -1,0 +1,144 @@
+Array
+(
+    [0] => Array
+        (
+            [pipeline_id] => 4953280
+            [_embedded] => Array
+                (
+                    [contacts] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [first_name] => Иван Петрович Лесоруб
+                                    [custom_fields_values] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [field_id] => 1566040
+                                                    [values] => Array
+                                                        (
+                                                            [0] => Array
+                                                                (
+                                                                    [enum_id] => 3711606
+                                                                    [value] => +73162222258
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [field_id] => 1566042
+                                                    [values] => Array
+                                                        (
+                                                            [0] => Array
+                                                                (
+                                                                    [enum_id] => 3711616
+                                                                    [value] => lesotubob@lesorubov.ru
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+Array
+(
+    [0] => Array
+        (
+            [id] => 36900465
+            [contact_id] => 66669823
+            [company_id] => 
+            [request_id] => Array
+                (
+                    [0] => 0
+                )
+
+            [merged] => 
+        )
+
+)
+Array
+(
+    [0] => Array
+        (
+            [pipeline_id] => 4953280
+            [_embedded] => Array
+                (
+                    [contacts] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [first_name] => Иван Петрович Лесоруб
+                                    [custom_fields_values] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [field_id] => 1566040
+                                                    [values] => Array
+                                                        (
+                                                            [0] => Array
+                                                                (
+                                                                    [enum_id] => 3711606
+                                                                    [value] => +73162222258
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [field_id] => 1566042
+                                                    [values] => Array
+                                                        (
+                                                            [0] => Array
+                                                                (
+                                                                    [enum_id] => 3711616
+                                                                    [value] => lesotubob@lesorubov.ru
+                                                                )
+
+                                                        )
+
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+        )
+
+)
+
+Array
+(
+    [0] => Array
+        (
+            [id] => 36900467
+            [contact_id] => 66669825
+            [company_id] => 
+            [request_id] => Array
+                (
+                    [0] => 0
+                )
+
+            [merged] => 
+        )
+
+)
