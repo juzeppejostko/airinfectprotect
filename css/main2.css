@@ -46,6 +46,10 @@
 	font-style: normal;
 }
 
+.hero__img {
+	width: 100vw;
+}
+
 body {
 	height: 100%;
     overflow-x: hidden;
