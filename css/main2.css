@@ -47,7 +47,7 @@
 }
 
 .hero__img {
-	width: 100vw;
+	max-width: 100%;
 }
 
 body {
@@ -304,7 +304,7 @@ section {
 }
 
 .hero {
-	background: #e3e8ee;
+	background: var(--background-gray);
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
