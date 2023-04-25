@@ -228,59 +228,6 @@ const _number = document.querySelector("._number");
 const _agreement = document.querySelector("._agreement");
 const _canCall = document.querySelector("._canCall");
 
-
-/*
-document.addEventListener("DOMContentLoaded", e => {
-    const form = document.getElementById("form");
-    form.addEventListener("submit", formSend);
-    async function formSend(e){
-        e.preventDefault()
-
-        let error = formValidate(form);
-        if(error === 0){
-        }
-    }
-
-    function formValidate(form){
-        let error = 0;
-        _email.classList.remove("_error");
-        _number.classList.remove("_error");
-        _agreement.classList.remove("_error");
-        _agreement.parentElement.classList.remove("_error");
-        _name.classList.remove("_error");
-
-        if(_agreement.checked === false){
-            _agreement.classList.add("_error");
-            _agreement.parentElement.classList.add("_error");
-            error++;
-        }
-        if(emailTest(_email) === false){
-            _email.classList.add("_error");
-            error++;
-        }
-        if(numberTest(_number)){
-            _number.classList.add("_error");
-            error++;
-        }else{
-            if(_email.value === "" || _number.value === "" || _name.value === ""){
-                _email.classList.add("_error");
-                _number.classList.add("_error");
-                _name.classList.add("_error");
-                error++;
-            }
-        }
-        return error;
-    }
-
-    function numberTest(number){
-        return /[a-zA-Z|а-эA-Э]/gm.test(number.value);
-    }
-    function emailTest(email){
-        return /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu.test(email.value);
-    }
-});
-*/
-
 function addLeadToAmoCrm(formId) {
     let firstName = formId.find('[name="name"]').val();
     let phone = formId.find('[name="number"]').val();
