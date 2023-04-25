@@ -8,7 +8,7 @@
 	--light-green: #3bb04c;
 	--pressed-green: #278d36;
 	--light-red: #de2b34;
-	--background-gray: #dee5ea;
+	--background-gray: #e3e8ee;
 	--solitude: #f6f7f9;
 	--border-gray: #e0e0e0;
 }
@@ -44,10 +44,6 @@
 		url("../fonts/VelaSans-Regular.svg") format("svg");
 	font-weight: normal;
 	font-style: normal;
-}
-
-.hero__img {
-	max-width: 100%;
 }
 
 body {
