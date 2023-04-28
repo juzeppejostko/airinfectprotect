@@ -59,6 +59,33 @@ section{
     background: white;
 }
 
+/* Анимация видео при скроле */
+
+.scroll-bound {
+    position: sticky;
+    height: 400vh;
+    top: 0;
+    z-index: -1;
+}
+
+.scroll-bound .content {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-bound video {
+    width: 1500px;
+}
+
+/* Конец анимации видео при скроле */
+
 .header {
     position: fixed;
     left: 0;
@@ -289,8 +316,8 @@ section{
 
 .hero{
     background: #E3E8EE;
-    position: -webkit-sticky;
-    position: sticky;
+    /* position: -webkit-sticky; */
+    /* position: sticky; */
     top: 0;
     z-index: -1;
 }

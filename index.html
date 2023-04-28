@@ -71,9 +71,18 @@
                     <div class="hero__button-block"><a href="#" class="hero__button button anchor">Заказать</a></div>
 
                     <div class="hero__video-block">
-                        <video width="100%" controls autoplay>
-                            <source src="video/FINAL_H.264.mp4" type="video/mp4">
-                        </video>
+                        <!--<video width="100%" playsinline="true" webkit-playsinline="true" preload="auto">
+                            <source src="/video/FINAL_H.264.mp4" type="video/mp4">
+                        </video>-->
+
+                        <div id="bound-two" class="scroll-bound">
+                            <div class="content">
+                                <video width="100%" muted preload>
+                                    <source src="/video/FINAL_H.264.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
                         <!--
                         <img class="anim_scroll" style="opacity: 1; z-index: -1;" src="video/slide/webp/044.webp" alt="">
 						<img class="anim_scroll" id="scroll_0" src="video/slide/webp/000.webp" alt="">
@@ -124,7 +133,6 @@
 						<img class="anim_scroll" id="scroll_45" src="video/slide/webp/045.webp" alt="">
 						-->
                    </div>
-
                 </div>
             </div>
         </section>
@@ -844,5 +852,6 @@
 <script src="js/script.js?v=3"></script>
 <script src="js/scroll_script.js"></script>
 <script src="https://player.vimeo.com/api/player.js"></script>
+<script src="js/video.js"></script>
 </body>
 </html>
